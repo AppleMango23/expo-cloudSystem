@@ -5,13 +5,17 @@ import { Button } from 'react-native';
 
 
 export default class Form extends React.Component {
+
+    
+
+
     render() {
       return (
         <View style={styles.container}>
 
           <Text style="color:white;">Username</Text>
             <TextInput
-            style={{ height: 50, width: 270, borderColor: 'white', borderWidth: 1,  marginBottom: 20, borderRadius:20,backgroundColor:'white' ,placeholderTextColor:'white',textAlign:"center"}}
+            style={styles.textInputStyle}
             // Adding hint in TextInput using Placeholder option.
             placeholder="Enter Your Username"
             // Making the Under line Transparent.
@@ -19,7 +23,7 @@ export default class Form extends React.Component {
             />
             <Text>Password</Text>
             <TextInput secureTextEntry={true}
-            style={{ height: 50, width: 270, borderColor: 'white', borderWidth: 1,  marginBottom: 20, borderRadius:20,backgroundColor:'white' ,placeholderTextColor:'white',textAlign:"center"}}
+            style={styles.textInputStyle}
             placeholder="Enter Your password"
             underlineColorAndroid="transparent"
             />
@@ -31,7 +35,7 @@ export default class Form extends React.Component {
             /> */}
 
             <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Login</Text>
+              <Text style={styles.buttonText}>{this.props.type}</Text>
             </TouchableOpacity>
           
         </View>
@@ -56,10 +60,11 @@ export default class Form extends React.Component {
 
     },
     button:{
-      width:300,
-      backgroundColor:'#707070',
+      width:230,
+      backgroundColor:'black',
       borderRadius:25,
       marginVertical:10,
+      paddingVertical:12
 
     },
     buttonText:{
@@ -67,5 +72,19 @@ export default class Form extends React.Component {
       fontWeight:'500',
       color:'#ffffff',
       textAlign:'center',
+      
+    },
+
+    textInputStyle:{
+      height: 50,
+      width: 270, 
+      borderColor: 'white', 
+      borderWidth: 1,  
+      marginBottom: 20, 
+      borderRadius:20,
+      backgroundColor:'white' ,
+      // placeholderTextColor:'white',
+      textAlign:"center",
+      
     }
   });

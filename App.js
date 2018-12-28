@@ -3,7 +3,7 @@ import { StyleSheet, Text, View,StatusBar,Navigator} from 'react-native';
 
 
 import Login from './src/pages/Login';
-// import Form from './src/pages/Form';
+import Signup from './src/pages/Signup';
 
 export default class App extends React.Component {
   render() {
@@ -13,8 +13,8 @@ export default class App extends React.Component {
       <StatusBar  barStyle = "light-content" hidden = {false} backgroundColor = "#00BCD4" translucent = {true}/>
       <Text>hi</Text>
 
-      <Login/>
-      
+      {/* <Login/> */}
+      <Signup/>
 
       </View>
       
